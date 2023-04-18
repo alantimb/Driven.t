@@ -1,8 +1,8 @@
 import { prisma } from "@/config";
-import { PaymentProcess } from "@/services/payments-service";
+import { ProcessPayment } from "@/protocols";
 import { Payment } from "@prisma/client";
 
-async function findFirst(ticketId: number): Promise<Payment> {
+async function findFirst(ticketId: number) {
     return await prisma.payment.findFirst({
         where: {
             ticketId: ticketId
@@ -10,9 +10,14 @@ async function findFirst(ticketId: number): Promise<Payment> {
     })
 }
 
-async function create(payment: PaymentProcess): Promise<Payment> {
+async function create(payment: ProcessPayment) {
     return await prisma.payment.create({
-        data: payment
+        data: {
+            ticketId: payment.ticketId,
+            value: payment.value,
+            cardIssuer: payment.cardIssuer,
+            cardLastDigits: payment.cardLastDigits
+        }
     })
 }
 

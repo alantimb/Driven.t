@@ -46,13 +46,25 @@ async function create(params: CreateTicket): Promise<Ticket> {
     });
 }
 
+async function updateTicket(ticket: Ticket) {
+    return await prisma.ticket.update({
+        where: {
+            id: ticket.id
+        }, 
+        data: {
+            status: 'PAID'
+        }
+    })
+}
+
 const ticketsRepository = {
     findMany,
     findFirst,
     findUnique,
     create,
     findTicketByEnrollment,
-    findTicketById
+    findTicketById,
+    updateTicket
 }
 
 export default ticketsRepository;

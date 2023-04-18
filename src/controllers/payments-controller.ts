@@ -22,11 +22,11 @@ export async function getTicketPayment(req: AuthenticatedRequest, res: Response,
 
 export async function paymentProcess(req: AuthenticatedRequest, res: Response, next: NextFunction) {
     const { ticketId, cardData } = req.body as { ticketId: number, cardData: CardData }
-    const { userId } = req as { userId: number }
+    const { userId } = req as { userId: number };
 
     try {
         const payment = await paymentsService.createPayment(ticketId, cardData, userId);
-
+        
         return res.status(httpStatus.OK).send(payment);
     } catch (err) {
         next(err)

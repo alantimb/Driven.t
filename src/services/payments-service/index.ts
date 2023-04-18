@@ -6,7 +6,7 @@ import ticketsRepository from "@/repositories/tickets-repository"
 import { Payment } from "@prisma/client";
 import dayjs from "dayjs";
 
-async function getTicketPayment(ticketId: number, userId: number): Promise<Payment> {
+async function getTicketPayment(ticketId: number, userId: number) {
     const ticket = await ticketsRepository.findTicketById(ticketId);
     if (!ticket) throw notFoundError() 
 
@@ -20,31 +20,25 @@ async function getTicketPayment(ticketId: number, userId: number): Promise<Payme
     return payment;
 }
 
-export type PaymentProcess = Omit<Payment, 'id'>
-
-async function createPayment(ticketId: number, cardData: CardData, userId: number): Promise<Payment> {
-    const ticket = await ticketsRepository.findTicketById(ticketId);
-    if (!ticket) throw notFoundError();
-
-    const ticketType = await ticketsRepository.findFirst(ticket.ticketTypeId);
-    if (!ticketType) throw notFoundError();
-
+async function createPayment(ticketId: number, cardData: CardData, userId: number) {
     const enrollment = await enrollmentRepository.findFirstByUserId(userId)
-    if (!enrollment) throw notFoundError()
 
-    if (ticket.enrollmentId !== enrollment.id) throw unauthorizedError();
+    const ticket = await ticketsRepository.findTicketById(ticketId);
+    if (!ticket) {throw notFoundError()}
 
-    const paymentProcess: PaymentProcess = {
-            ticketId: ticketId,
-            value: ticketType.price,
-            cardIssuer: cardData.issuer,
-            cardLastDigits: (cardData.number % 10000).toString(),
-            createdAt: dayjs().toDate(),
-            updatedAt: dayjs().toDate(),
-    }
+    if (ticket.enrollmentId !== enrollment.id) {throw unauthorizedError()}
 
-    const payment = await paymentsRepository.create(paymentProcess);
+    const ticketType = await ticketsRepository.findFirst(ticket.ticketTypeId)
 
+    const payment = await paymentsRepository.create({
+        ticketId: ticketId,
+        value: ticketType.price,
+        cardIssuer: cardData.issuer,
+        cardLastDigits: (cardData.number % 10000).toString(),
+});
+
+    await ticketsRepository.updateTicket(ticket);
+    
     return payment;
 }
 

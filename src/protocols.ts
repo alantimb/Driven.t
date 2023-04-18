@@ -35,3 +35,10 @@ export type CardData = {
   expirationDate: Date | string;
   cvv: number;
 }
+
+export type ProcessPayment = {
+  ticketId: number;
+  value: number;
+  cardIssuer: string;
+  cardLastDigits: string;
+};
