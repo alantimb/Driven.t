@@ -19,13 +19,13 @@ async function getAllTicketTypes(): Promise<TicketType[]> {
 
 async function getUserTickets(params: number) {
     const enrollment = await enrollmentRepository.findFirstByUserId(params);
-    if (!enrollment) throw notFoundError()
+    if (!enrollment) throw notFoundError();
 
     const ticket = await ticketsRepository.findTicket(enrollment.id);
-    if (!ticket) throw notFoundError()
+    if (!ticket) throw notFoundError();
 
-    const ticketType = await ticketsRepository.findFirst(ticket.ticketTypeId)
-    if (!ticketType) throw notFoundError()
+    const ticketType = await ticketsRepository.findFirst(ticket.ticketTypeId);
+    if (!ticketType) throw notFoundError();
 
     const userTicket = {
         id: ticket.id,
@@ -35,7 +35,7 @@ async function getUserTickets(params: number) {
         TicketType: ticketType,
         createdAt: ticket.createdAt,
         updatedAt: ticket.updatedAt
-    }   
+    };
 
     return userTicket;
 }
