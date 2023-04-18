@@ -21,7 +21,7 @@ async function getUserTickets(params: number) {
     const enrollment = await enrollmentRepository.findFirstByUserId(params);
     if (!enrollment) throw notFoundError();
 
-    const ticket = await ticketsRepository.findTicket(enrollment.id);
+    const ticket = await ticketsRepository.findTicketByEnrollment(enrollment.id);
     if (!ticket) throw notFoundError();
 
     const ticketType = await ticketsRepository.findFirst(ticket.ticketTypeId);

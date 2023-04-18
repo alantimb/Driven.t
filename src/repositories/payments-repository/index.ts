@@ -1,9 +1,10 @@
 import { prisma } from "@/config";
+import { Payment } from "@prisma/client";
 
-async function findFirst(params: number) {
+async function findFirst(ticketId: number): Promise<Payment> {
     return await prisma.payment.findFirst({
         where: {
-            ticketId: params
+            ticketId: ticketId
         }
     })
 }
