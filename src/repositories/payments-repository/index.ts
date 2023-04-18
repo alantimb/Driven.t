@@ -1,4 +1,5 @@
 import { prisma } from "@/config";
+import { PaymentProcess } from "@/services/payments-service";
 import { Payment } from "@prisma/client";
 
 async function findFirst(ticketId: number): Promise<Payment> {
@@ -9,8 +10,15 @@ async function findFirst(ticketId: number): Promise<Payment> {
     })
 }
 
+async function create(payment: PaymentProcess): Promise<Payment> {
+    return await prisma.payment.create({
+        data: payment
+    })
+}
+
 const paymentsRepository = {
     findFirst,
+    create
 }
 
 export default paymentsRepository;
