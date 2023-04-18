@@ -1,6 +1,7 @@
 import { notFoundError } from "@/errors";
+import enrollmentRepository from "@/repositories/enrollment-repository";
 import ticketsRepository from "@/repositories/tickets-repository";
-import { Enrollment, Ticket, TicketType } from "@prisma/client";
+import { Ticket, TicketType } from "@prisma/client";
 import dayjs from "dayjs";
 
 async function getAllTicketTypes(): Promise<TicketType[]> {
@@ -15,12 +16,29 @@ async function getAllTicketTypes(): Promise<TicketType[]> {
     }
 }
 
-export type CreateTicketType = Pick<Ticket, 'ticketTypeId'>
 
-// export type CreateTicketParams = {
-//     ticketTypeId: number,
-//     userId: number
-// }
+async function getUserTickets(params: number) {
+    const enrollment = await enrollmentRepository.findFirstByUserId(params);
+    if (!enrollment) throw notFoundError()
+
+    const ticket = await ticketsRepository.findTicket(enrollment.id);
+    if (!ticket) throw notFoundError()
+
+    const ticketType = await ticketsRepository.findFirst(ticket.ticketTypeId)
+    if (!ticketType) throw notFoundError()
+
+    const userTicket = {
+        id: ticket.id,
+        status: ticket.status,
+        ticketTypeId: ticket.ticketTypeId,
+        enrollmentId: ticket.enrollmentId,
+        TicketType: ticketType,
+        createdAt: ticket.createdAt,
+        updatedAt: ticket.updatedAt
+    }   
+
+    return userTicket;
+}
 
 export type CreateTicket = Omit<Ticket, 'id' | 'createdAt'>
 
@@ -55,7 +73,8 @@ async function createTicketByType(userId: number, ticketTypeId: number) {
 
 const ticketsService = {
     getAllTicketTypes,
-    createTicketByType
+    createTicketByType,
+    getUserTickets
 }
 
 export default ticketsService;
