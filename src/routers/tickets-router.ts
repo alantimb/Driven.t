@@ -1,7 +1,7 @@
-import { authenticateToken } from "@/middlewares";
-import { prisma } from "@/config";
+import { authenticateToken, validateBody } from "@/middlewares";
 import { Router } from "express";
-import { getAllTicketTypes } from "@/controllers";
+import { createTicketByType, getAllTicketTypes } from "@/controllers";
+import { createTicketSchema } from "@/schemas/tickets-schema";
 
 const ticketsRouter = Router();
 
@@ -9,6 +9,6 @@ ticketsRouter
     .all('/*', authenticateToken)
     .get('/types', getAllTicketTypes)
     // .get('/')
-    // .post('/')
+    .post('/', validateBody(createTicketSchema), createTicketByType)
 
 export { ticketsRouter }
