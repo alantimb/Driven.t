@@ -2,7 +2,7 @@ import { ApplicationError } from "@/protocols";
 
 export function paymentRequiredError(): ApplicationError {
     return {
-        name: 'paymentRequiredError',
+        name: 'PaymentRequiredError',
         message: 'Payment has not yet been made!'
     }
 }
