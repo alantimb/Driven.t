@@ -3,8 +3,10 @@ import faker from "@faker-js/faker";
 import httpStatus from "http-status";
 import supertest from "supertest";
 import * as jwt from 'jsonwebtoken';
-import { createUser } from "../factories";
-import { cleanDb } from "../helpers";
+import { createEnrollmentWithAddress, createTicket, createTicketType, createUser } from "../factories";
+import { generateValidToken } from "../helpers";
+import { TicketStatus } from "@prisma/client";
+import { createHotel } from "../factories/hotels-factory";
 
 beforeAll(async () => {
     await init();
@@ -35,6 +37,40 @@ describe('GET /hotels', () => {
 
         expect(response.status).toBe(httpStatus.UNAUTHORIZED);
     });
-})
 
-// describe('GET /hotels')
+    describe('when token is valid', () => {
+        it('should respond with empty array when there are no hotels created', async () => {
+            const token = await generateValidToken();
+            
+            const response = await server.get('/hotels/').set('Authorization', `Bearer ${token}`);
+
+            expect(response.body).toEqual({
+                "message": "No result for this search!",
+            })
+        });
+
+        it('should respond with status 200 and with existing Hotels data', async () => {
+            const user = await createUser();
+            const token = await generateValidToken(user);
+            const enrollment = await createEnrollmentWithAddress(user);
+            const ticketType = await createTicketType();
+            await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID)
+            const hotel = await createHotel();
+
+            const response = await server.get('/hotels/').set('Authorization', `Bearer ${token}`);
+
+            expect(response.status).toBe(httpStatus.OK);
+            expect(response.body).toEqual(
+                expect.arrayContaining([
+                    expect.objectContaining({
+                        id: hotel.id,
+                        name: hotel.name,
+                        image: hotel.image,
+                        createdAt: hotel.createdAt.toISOString(),
+                        updatedAt: hotel.updatedAt.toISOString()
+                    })
+                ])
+            ) 
+        })
+    })
+})
