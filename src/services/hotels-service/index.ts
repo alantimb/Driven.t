@@ -1,7 +1,6 @@
 import { notFoundError } from "@/errors";
 import hotelsRepository from "@/repositories/hotel-repository";
 import ticketsRepository from "@/repositories/tickets-repository";
-import httpStatus from "http-status";
 
 async function getAllHotels(userId: number) {
     const isEnrollmentExists = await ticketsRepository.findUnique(userId);
@@ -39,20 +38,6 @@ async function getAllRooms(hotelId: number, userId: number) {
 
     return hotelRooms;
 }
-
-// async function itExists(userId: number) {
-//     console.log(userId + " oi")
-
-//     try {
-//         const isEnrollmentExists = await ticketsRepository.findUnique(userId);
-//         if (!isEnrollmentExists) throw notFoundError();
-    
-//         const isTicketExists = await ticketsRepository.findTicketByEnrollment(isEnrollmentExists.id);
-//         if (!isTicketExists) throw notFoundError();
-//     } catch (err) {
-//         return httpStatus.NOT_FOUND
-//     }
-// }
 
 const hotelsService = {
     getAllHotels,
