@@ -26,7 +26,11 @@ async function getAllRooms(hotelId: number, userId: number) {
     
     const isTicketExists = await ticketsRepository.findTicketByEnrollment(isEnrollmentExists.id);
     if (!isTicketExists) throw notFoundError();
+    if (isTicketExists.status !== 'PAID') throw paymentRequiredError();
 
+    const ticketType = await ticketsRepository.findFirst(isTicketExists.ticketTypeId)
+    if (ticketType.isRemote === true || ticketType.includesHotel === false) throw paymentRequiredError()
+    
     const hotel = await hotelsRepository.findHotelById(hotelId);
     if (!hotel) throw notFoundError();
 
