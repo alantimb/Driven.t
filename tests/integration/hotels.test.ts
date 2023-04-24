@@ -44,6 +44,7 @@ describe('GET /hotels', () => {
             
             const response = await server.get('/hotels/').set('Authorization', `Bearer ${token}`);
 
+            expect(response.status).toBe(404);
             expect(response.body).toEqual({
                 "message": "No result for this search!",
             })
@@ -71,6 +72,19 @@ describe('GET /hotels', () => {
                     })
                 ])
             ) 
+        });
+
+        it('should respond with status 404 when user doesnt have enrollment yet', async () => {
+            const user = await createUser();
+            const token = await generateValidToken(user);
+            const ticketType = await createTicketType();
+
+            const response = await server
+                .post('/tickets')
+                .set('Authorization', `Bearer ${token}`)
+                .send({ ticketTypeId: ticketType.id });
+
+            expect(response.status).toEqual(httpStatus.NOT_FOUND);
         })
     })
 })
