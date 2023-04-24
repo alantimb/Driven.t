@@ -4,8 +4,8 @@ import { NextFunction, Response } from "express";
 import httpStatus from "http-status";
 
 export async function getAllHotels(req: AuthenticatedRequest, res: Response, next: NextFunction) {
-   const userId = req.body.userId as number;
-
+   const { userId } = req;
+   
    try {
       const hotels = await hotelsService.getAllHotels(userId);
 
@@ -17,7 +17,7 @@ export async function getAllHotels(req: AuthenticatedRequest, res: Response, nex
 
 export async function getAllRoomsByHotelId(req: AuthenticatedRequest, res: Response, next: NextFunction) {
    const hotelId  = +req.params.hotelId;
-   const userId = req.body.userId as number;
+   const { userId } = req;
 
    try {
       const hotelRooms = await hotelsService.getAllRooms(hotelId, userId);
