@@ -225,7 +225,7 @@ describe('GET /hotels/:hotelId', () => {
             expect(response.status).toEqual(httpStatus.PAYMENT_REQUIRED);
         });
 
-        it('should respond with status 200 and with existing Hotels data', async () => {
+        it('should respond with status 200 and with existing Hotel and Rooms data', async () => {
             const user = await createUser();
             const token = await generateValidToken(user);
             const enrollment = await createEnrollmentWithAddress(user);
@@ -233,27 +233,25 @@ describe('GET /hotels/:hotelId', () => {
             await createTicket(enrollment.id, ticketType.id, TicketStatus.PAID)
             const hotel = await createHotel();
             const room = await createRoom(hotel.id)
+            
+            const response = await server.get(`/hotels/${hotel.id}`).set('Authorization', `Bearer ${token}`);
 
-            const response = await server.get('/hotels').set('Authorization', `Bearer ${token}`);
-
-            expect(response.body).toEqual(expect.objectContaining({
+            expect(response.status).toBe(httpStatus.OK);
+            expect(response.body).toEqual({
                 id: hotel.id,
                 name: hotel.name,
                 image: hotel.image,
                 createdAt: hotel.createdAt.toISOString(),
                 updatedAt: hotel.updatedAt.toISOString(),
-                Rooms: expect.arrayContaining([
-                        expect.objectContaining({
+                Rooms: [{
                             id: room.id,
                             name: room.name,
                             capacity: room.capacity,
                             hotelId: hotel.id,
                             createdAt: room.createdAt.toISOString(),
                             updatedAt: room.updatedAt.toISOString()
-                        })
-                    ])
-            }));
-            expect(response.status).toBe(httpStatus.OK); 
+                        }]
+            });
         });
     })
 })
