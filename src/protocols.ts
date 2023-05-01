@@ -1,3 +1,5 @@
+import { Payment, Ticket } from '@prisma/client';
+
 export type ApplicationError = {
   name: string;
   message: string;
@@ -28,17 +30,18 @@ export type RequestError = {
   message: string;
 };
 
-export type CardData = {
+export type CreateTicketParams = Omit<Ticket, 'id' | 'createdAt' | 'updatedAt'>;
+
+export type CardPaymentParams = {
   issuer: string;
   number: number;
   name: string;
-  expirationDate: Date | string;
+  expirationDate: Date;
   cvv: number;
-}
+};
 
-export type ProcessPayment = {
-  ticketId: number;
-  value: number;
-  cardIssuer: string;
-  cardLastDigits: string;
+export type PaymentParams = Omit<Payment, 'id' | 'createdAt' | 'updatedAt'>;
+
+export type InputTicketBody = {
+  ticketTypeId: number;
 };

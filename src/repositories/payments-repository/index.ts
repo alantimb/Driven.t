@@ -1,29 +1,21 @@
-import { prisma } from "@/config";
-import { ProcessPayment } from "@/protocols";
-import { Payment } from "@prisma/client";
+import { prisma } from '@/config';
+import { PaymentParams } from '@/protocols';
 
-async function findFirst(ticketId: number) {
-    return await prisma.payment.findFirst({
-        where: {
-            ticketId: ticketId
-        }
-    })
+async function findPaymentByTicketId(ticketId: number) {
+  return prisma.payment.findFirst({
+    where: {
+      ticketId,
+    },
+  });
 }
 
-async function create(payment: ProcessPayment) {
-    return await prisma.payment.create({
-        data: {
-            ticketId: payment.ticketId,
-            value: payment.value,
-            cardIssuer: payment.cardIssuer,
-            cardLastDigits: payment.cardLastDigits
-        }
-    })
+async function createPayment(ticketId: number, params: PaymentParams) {
+  return prisma.payment.create({
+    data: {
+      ticketId,
+      ...params,
+    },
+  });
 }
 
-const paymentsRepository = {
-    findFirst,
-    create
-}
-
-export default paymentsRepository;
+export default { findPaymentByTicketId, createPayment };

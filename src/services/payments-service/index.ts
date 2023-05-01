@@ -1,50 +1,45 @@
-import { notFoundError, requestError, unauthorizedError } from "@/errors"
-import { CardData } from "@/protocols";
-import enrollmentRepository from "@/repositories/enrollment-repository";
-import paymentsRepository from "@/repositories/payments-repository"
-import ticketsRepository from "@/repositories/tickets-repository"
-import { Payment } from "@prisma/client";
-import dayjs from "dayjs";
+import { notFoundError, unauthorizedError } from '@/errors';
+import { CardPaymentParams, PaymentParams } from '@/protocols';
+import enrollmentRepository from '@/repositories/enrollment-repository';
+import paymentsRepository from '@/repositories/payments-repository';
+import ticketsRepository from '@/repositories/tickets-repository';
 
-async function getTicketPayment(ticketId: number, userId: number) {
-    const ticket = await ticketsRepository.findTicketById(ticketId);
-    if (!ticket) throw notFoundError() 
+async function verifyTicketAndEnrollment(ticketId: number, userId: number) {
+  const ticket = await ticketsRepository.findTickeyById(ticketId);
+  if (!ticket) throw notFoundError();
 
-    const enrollment = await enrollmentRepository.findFirstByUserId(userId)
-    if (!enrollment) throw notFoundError()
+  const enrollment = await enrollmentRepository.findById(ticket.enrollmentId);
+  if (!enrollment) throw notFoundError();
 
-    if (ticket.enrollmentId !== enrollment.id) throw unauthorizedError();
-
-    const payment = await paymentsRepository.findFirst(ticketId)
-
-    return payment;
+  if (enrollment.userId !== userId) throw unauthorizedError();
 }
 
-async function createPayment(ticketId: number, cardData: CardData, userId: number) {
-    const enrollment = await enrollmentRepository.findFirstByUserId(userId)
+async function getPaymentByTicketId(userId: number, ticketId: number) {
+  await verifyTicketAndEnrollment(ticketId, userId);
 
-    const ticket = await ticketsRepository.findTicketById(ticketId);
-    if (!ticket) {throw notFoundError()}
+  const payment = await paymentsRepository.findPaymentByTicketId(ticketId);
+  if (!payment) throw notFoundError();
 
-    if (ticket.enrollmentId !== enrollment.id) {throw unauthorizedError()}
-
-    const ticketType = await ticketsRepository.findFirst(ticket.ticketTypeId)
-
-    const payment = await paymentsRepository.create({
-        ticketId: ticketId,
-        value: ticketType.price,
-        cardIssuer: cardData.issuer,
-        cardLastDigits: (cardData.number % 10000).toString(),
-});
-
-    await ticketsRepository.updateTicket(ticket);
-    
-    return payment;
+  return payment;
 }
 
-const paymentsService = {
-    getTicketPayment,
-    createPayment
+async function paymentProcess(ticketId: number, userId: number, cardData: CardPaymentParams) {
+  await verifyTicketAndEnrollment(ticketId, userId);
+
+  const ticket = await ticketsRepository.findTickeWithTypeById(ticketId);
+
+  const paymentData: PaymentParams = {
+    ticketId,
+    value: ticket.TicketType.price,
+    cardIssuer: cardData.issuer,
+    cardLastDigits: cardData.number.toString().slice(-4),
+  };
+
+  const payment = await paymentsRepository.createPayment(ticketId, paymentData);
+
+  await ticketsRepository.ticketProcessPayment(ticketId);
+
+  return payment;
 }
 
-export default paymentsService
+export default { getPaymentByTicketId, paymentProcess };
