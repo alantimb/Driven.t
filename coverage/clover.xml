@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1683005484006" clover="3.2.0">
-  <project timestamp="1683005484006" name="All files">
-    <metrics statements="576" coveredstatements="551" conditionals="91" coveredconditionals="69" methods="100" coveredmethods="92" elements="767" coveredelements="712" complexity="0" loc="576" ncloc="576" packages="25" files="66" classes="66"/>
+<coverage generated="1683043899706" clover="3.2.0">
+  <project timestamp="1683043899707" name="All files">
+    <metrics statements="665" coveredstatements="539" conditionals="107" coveredconditionals="56" methods="113" coveredmethods="85" elements="885" coveredelements="680" complexity="0" loc="665" ncloc="665" packages="28" files="74" classes="74"/>
     <package name="src">
       <metrics statements="17" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="app.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/app.ts">
@@ -14,15 +14,15 @@
         <line num="8" count="10" type="stmt"/>
         <line num="10" count="10" type="stmt"/>
         <line num="11" count="10" type="stmt"/>
-        <line num="21" count="10" type="stmt"/>
         <line num="22" count="10" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="35" count="10" type="stmt"/>
-        <line num="36" count="10" type="stmt"/>
+        <line num="23" count="10" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
         <line num="37" count="10" type="stmt"/>
-        <line num="40" count="10" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="44" count="10" type="stmt"/>
+        <line num="38" count="10" type="stmt"/>
+        <line num="39" count="10" type="stmt"/>
+        <line num="42" count="10" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="46" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.config">
@@ -51,7 +51,7 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="110" coveredstatements="105" conditionals="10" coveredconditionals="5" methods="13" coveredmethods="13"/>
+      <metrics statements="143" coveredstatements="103" conditionals="15" coveredconditionals="7" methods="16" coveredmethods="13"/>
       <file name="authentication-controller.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/controllers/authentication-controller.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="10" type="stmt"/>
@@ -60,24 +60,60 @@
         <line num="6" count="5" type="stmt"/>
         <line num="8" count="5" type="stmt"/>
         <line num="9" count="5" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+      <file name="bookings-controller.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/controllers/bookings-controller.ts">
+        <metrics statements="33" coveredstatements="5" conditionals="5" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="50" count="10" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="65" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
       </file>
       <file name="enrollments-controller.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/controllers/enrollments-controller.ts">
-        <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <metrics statements="20" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="2" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
         <line num="18" count="10" type="stmt"/>
         <line num="19" count="2" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
         <line num="31" count="10" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
         <line num="34" count="2" type="stmt"/>
@@ -97,22 +133,22 @@
         <line num="10" count="1" type="stmt"/>
       </file>
       <file name="hotel-controller.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/controllers/hotel-controller.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="15" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
         <line num="17" count="10" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="21" count="5" type="stmt"/>
-        <line num="22" count="5" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/controllers/index.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -124,34 +160,34 @@
         <line num="6" count="10" type="stmt"/>
       </file>
       <file name="payments-controller.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/controllers/payments-controller.ts">
-        <metrics statements="24" coveredstatements="21" conditionals="8" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="24" coveredstatements="19" conditionals="8" coveredconditionals="5" methods="2" coveredmethods="2"/>
         <line num="2" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="11" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
         <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="18" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="19" count="0" type="stmt"/>
+        <line num="18" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="25" count="10" type="stmt"/>
-        <line num="26" count="5" type="stmt"/>
-        <line num="27" count="5" type="stmt"/>
-        <line num="29" count="5" type="stmt"/>
-        <line num="30" count="5" type="cond" truecount="2" falsecount="1"/>
-        <line num="32" count="5" type="stmt"/>
-        <line num="33" count="3" type="cond" truecount="0" falsecount="1"/>
-        <line num="35" count="3" type="stmt"/>
-        <line num="37" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="cond" truecount="2" falsecount="1"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
       </file>
       <file name="tickets-controller.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/controllers/tickets-controller.ts">
-        <metrics statements="20" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="20" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="2" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
         <line num="7" count="10" type="stmt"/>
@@ -160,17 +196,17 @@
         <line num="10" count="2" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="16" count="10" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
         <line num="27" count="10" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
       </file>
       <file name="users-controller.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/controllers/users-controller.ts">
@@ -181,25 +217,30 @@
         <line num="6" count="6" type="stmt"/>
         <line num="8" count="6" type="stmt"/>
         <line num="9" count="6" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="15" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.errors">
-      <metrics statements="23" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="6"/>
+      <metrics statements="25" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="5"/>
       <file name="cannot-enroll-before-start-date-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/cannot-enroll-before-start-date-error.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
-      </file>
-      <file name="cannot-list-hotels-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/cannot-list-hotels-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="10" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
       </file>
+      <file name="cannot-list-hotels-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/cannot-list-hotels-error.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
       <file name="conflict-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/conflict-error.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="forbidden-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/forbidden-error.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="10" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -217,7 +258,7 @@
       <file name="invalid-data-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/invalid-data-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="10" type="stmt"/>
-        <line num="4" count="8" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
       </file>
       <file name="invalid-email-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/invalid-email-error.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -227,7 +268,7 @@
       <file name="not-found-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/not-found-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="10" type="stmt"/>
-        <line num="4" count="13" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
       </file>
       <file name="request-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/request-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -237,47 +278,45 @@
       <file name="unauthorized-error.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/errors/unauthorized-error.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="10" type="stmt"/>
-        <line num="4" count="28" type="stmt"/>
+        <line num="4" count="35" type="stmt"/>
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="47" coveredstatements="40" conditionals="13" coveredconditionals="8" methods="8" coveredmethods="7"/>
+      <metrics statements="45" coveredstatements="36" conditionals="13" coveredconditionals="7" methods="8" coveredmethods="8"/>
       <file name="authentication-middleware.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/middlewares/authentication-middleware.ts">
-        <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="15" coveredstatements="14" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
         <line num="8" count="10" type="stmt"/>
-        <line num="9" count="58" type="stmt"/>
-        <line num="10" count="58" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="49" type="stmt"/>
-        <line num="13" count="49" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="49" type="stmt"/>
-        <line num="16" count="49" type="stmt"/>
-        <line num="18" count="40" type="stmt"/>
-        <line num="23" count="40" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="31" type="stmt"/>
-        <line num="27" count="31" type="stmt"/>
-        <line num="29" count="9" type="stmt"/>
-        <line num="34" count="27" type="stmt"/>
+        <line num="9" count="52" type="stmt"/>
+        <line num="10" count="52" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="43" type="stmt"/>
+        <line num="13" count="43" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="43" type="stmt"/>
+        <line num="18" count="43" type="stmt"/>
+        <line num="23" count="43" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="21" type="stmt"/>
+        <line num="27" count="21" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="34" count="31" type="stmt"/>
       </file>
       <file name="error-handling-middleware.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/middlewares/error-handling-middleware.ts">
-        <metrics statements="16" coveredstatements="10" conditionals="8" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <metrics statements="16" coveredstatements="8" conditionals="8" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="2" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
-        <line num="11" count="10" type="cond" truecount="0" falsecount="1"/>
+        <line num="11" count="6" type="cond" truecount="0" falsecount="1"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="17" count="10" type="cond" truecount="2" falsecount="1"/>
+        <line num="17" count="6" type="cond" truecount="2" falsecount="1"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="23" count="10" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="6" type="cond" truecount="0" falsecount="1"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="29" count="10" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="6" type="cond" truecount="0" falsecount="1"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="35" count="10" type="cond" truecount="1" falsecount="0"/>
-        <line num="36" count="8" type="stmt"/>
-        <line num="41" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="42" count="2" type="stmt"/>
+        <line num="35" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="36" count="6" type="stmt"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="42" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
       </file>
@@ -288,28 +327,42 @@
         <line num="3" count="10" type="stmt"/>
       </file>
       <file name="validation-middleware.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/middlewares/validation-middleware.ts">
-        <metrics statements="11" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
         <line num="2" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
-        <line num="7" count="40" type="stmt"/>
+        <line num="7" count="60" type="stmt"/>
         <line num="10" count="10" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="15" count="40" type="stmt"/>
-        <line num="16" count="24" type="stmt"/>
-        <line num="20" count="24" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="16" type="stmt"/>
-        <line num="23" count="24" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="15" count="70" type="stmt"/>
+        <line num="16" count="21" type="stmt"/>
+        <line num="20" count="21" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="14" type="stmt"/>
+        <line num="23" count="23" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.address-repository">
-      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/repositories/address-repository/index.ts">
-        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="10" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
         <line num="20" count="10" type="stmt"/>
         <line num="24" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.repositories.bookings-repository">
+      <metrics statements="8" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/repositories/bookings-repository/index.ts">
+        <metrics statements="8" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="53" count="10" type="stmt"/>
+        <line num="61" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.enrollment-repository">
@@ -317,12 +370,12 @@
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/repositories/enrollment-repository/index.ts">
         <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
         <line num="2" count="10" type="stmt"/>
-        <line num="5" count="17" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="26" count="2" type="stmt"/>
         <line num="36" count="4" type="stmt"/>
         <line num="44" count="10" type="stmt"/>
-        <line num="50" count="10" type="stmt"/>
+        <line num="51" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.event-repository">
@@ -336,24 +389,34 @@
       </file>
     </package>
     <package name="src.repositories.hotel-repository">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/repositories/hotel-repository/index.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="10" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
         <line num="18" count="10" type="stmt"/>
         <line num="23" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.payments-repository">
-      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/repositories/payments-repository/index.ts">
-        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="10" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
         <line num="21" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.repositories.rooms-repository">
+      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/repositories/rooms-repository/index.ts">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.repositories.session-repository">
@@ -367,17 +430,17 @@
       </file>
     </package>
     <package name="src.repositories.tickets-repository">
-      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/repositories/tickets-repository/index.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
         <line num="1" count="10" type="stmt"/>
         <line num="2" count="10" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
-        <line num="14" count="11" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="40" count="3" type="stmt"/>
-        <line num="51" count="3" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
         <line num="61" count="10" type="stmt"/>
       </file>
     </package>
@@ -386,17 +449,17 @@
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/repositories/user-repository/index.ts">
         <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="2" count="10" type="stmt"/>
-        <line num="5" count="14" type="stmt"/>
-        <line num="11" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="16" type="stmt"/>
+        <line num="11" count="16" type="cond" truecount="1" falsecount="0"/>
         <line num="12" count="9" type="stmt"/>
-        <line num="15" count="14" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
+        <line num="15" count="16" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
         <line num="24" count="10" type="stmt"/>
         <line num="29" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.routers">
-      <metrics statements="52" coveredstatements="52" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="61" coveredstatements="61" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="authentication-router.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/routers/authentication-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="10" type="stmt"/>
@@ -406,6 +469,17 @@
         <line num="6" count="10" type="stmt"/>
         <line num="8" count="10" type="stmt"/>
         <line num="10" count="10" type="stmt"/>
+      </file>
+      <file name="bookings-router.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/routers/bookings-router.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
       </file>
       <file name="enrollments-router.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/routers/enrollments-router.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -432,10 +506,10 @@
         <line num="3" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
         <line num="7" count="10" type="stmt"/>
-        <line num="9" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/routers/index.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="10" type="stmt"/>
         <line num="2" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
@@ -443,6 +517,7 @@
         <line num="5" count="10" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
         <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
       </file>
       <file name="payments-router.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/routers/payments-router.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -475,11 +550,16 @@
       </file>
     </package>
     <package name="src.schemas">
-      <metrics statements="29" coveredstatements="28" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <metrics statements="33" coveredstatements="32" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="authentication-schemas.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/schemas/authentication-schemas.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="13" type="stmt"/>
         <line num="4" count="13" type="stmt"/>
+      </file>
+      <file name="booking-schema.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/schemas/booking-schema.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
       </file>
       <file name="enrollments-schemas.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/schemas/enrollments-schemas.ts">
         <metrics statements="19" coveredstatements="18" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="4"/>
@@ -509,6 +589,11 @@
         <line num="2" count="13" type="stmt"/>
         <line num="3" count="13" type="stmt"/>
         <line num="4" count="13" type="stmt"/>
+      </file>
+      <file name="room-schema.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/schemas/room-schema.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
       </file>
       <file name="tickets-schemas.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/schemas/tickets-schemas.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -540,13 +625,13 @@
         <line num="12" count="9" type="stmt"/>
         <line num="14" count="7" type="stmt"/>
         <line num="16" count="5" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
         <line num="25" count="9" type="stmt"/>
         <line num="26" count="9" type="cond" truecount="1" falsecount="0"/>
         <line num="28" count="7" type="stmt"/>
         <line num="32" count="5" type="stmt"/>
         <line num="33" count="5" type="stmt"/>
-        <line num="38" count="4" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
         <line num="42" count="7" type="stmt"/>
         <line num="43" count="7" type="cond" truecount="1" falsecount="0"/>
         <line num="55" count="10" type="stmt"/>
@@ -554,10 +639,47 @@
         <line num="60" count="10" type="stmt"/>
       </file>
     </package>
+    <package name="src.services.bookings-service">
+      <metrics statements="31" coveredstatements="8" conditionals="11" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/services/bookings-service/index.ts">
+        <metrics statements="31" coveredstatements="8" conditionals="11" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="53" count="10" type="stmt"/>
+        <line num="59" count="10" type="stmt"/>
+      </file>
+    </package>
     <package name="src.services.enrollments-service">
-      <metrics statements="28" coveredstatements="26" conditionals="9" coveredconditionals="8" methods="5" coveredmethods="5"/>
+      <metrics statements="28" coveredstatements="22" conditionals="9" coveredconditionals="6" methods="5" coveredmethods="4"/>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/services/enrollments-service/index.ts">
-        <metrics statements="28" coveredstatements="26" conditionals="9" coveredconditionals="8" methods="5" coveredmethods="5"/>
+        <metrics statements="28" coveredstatements="22" conditionals="9" coveredconditionals="6" methods="5" coveredmethods="4"/>
         <line num="2" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
@@ -571,18 +693,18 @@
         <line num="26" count="3" type="stmt"/>
         <line num="30" count="2" type="stmt"/>
         <line num="32" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="46" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="48" count="1" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="46" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="48" count="0" type="stmt"/>
         <line num="54" count="2" type="stmt"/>
         <line num="55" count="2" type="stmt"/>
         <line num="57" count="2" type="stmt"/>
         <line num="58" count="2" type="stmt"/>
         <line num="60" count="0" type="stmt"/>
         <line num="63" count="2" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
+        <line num="65" count="2" type="stmt"/>
         <line num="69" count="2" type="stmt"/>
         <line num="79" count="10" type="stmt"/>
         <line num="85" count="10" type="stmt"/>
@@ -601,72 +723,72 @@
         <line num="11" count="1" type="stmt"/>
         <line num="17" count="9" type="stmt"/>
         <line num="18" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="6" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
-        <line num="24" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="24" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="27" count="10" type="stmt"/>
         <line num="32" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.services.hotels-service">
-      <metrics statements="22" coveredstatements="22" conditionals="12" coveredconditionals="12" methods="3" coveredmethods="3"/>
+      <metrics statements="22" coveredstatements="11" conditionals="12" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/services/hotels-service/index.ts">
-        <metrics statements="22" coveredstatements="22" conditionals="12" coveredconditionals="12" methods="3" coveredmethods="3"/>
+        <metrics statements="22" coveredstatements="11" conditionals="12" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="1" count="10" type="stmt"/>
         <line num="2" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
-        <line num="8" count="9" type="stmt"/>
-        <line num="9" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
-        <line num="14" count="7" type="cond" truecount="5" falsecount="0"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="23" count="2" type="cond" truecount="3" falsecount="0"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="30" count="5" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="34" count="3" type="cond" truecount="3" falsecount="0"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
         <line num="40" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.services.payments-service">
-      <metrics statements="20" coveredstatements="17" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <metrics statements="20" coveredstatements="12" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/services/payments-service/index.ts">
-        <metrics statements="20" coveredstatements="17" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <metrics statements="20" coveredstatements="12" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="1" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
         <line num="4" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="9" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="11" count="4" type="stmt"/>
         <line num="12" count="4" type="cond" truecount="0" falsecount="1"/>
         <line num="14" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="23" count="0" type="stmt"/>
-        <line num="27" count="5" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="38" count="3" type="stmt"/>
-        <line num="40" count="3" type="stmt"/>
-        <line num="42" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
         <line num="45" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.services.tickets-service">
-      <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <metrics statements="20" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/services/tickets-service/index.ts">
-        <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <metrics statements="20" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="1" count="10" type="stmt"/>
         <line num="2" count="10" type="stmt"/>
         <line num="3" count="10" type="stmt"/>
@@ -674,17 +796,17 @@
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="11" count="2" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="18" count="2" type="stmt"/>
-        <line num="19" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="26" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="34" count="2" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
         <line num="41" count="10" type="stmt"/>
         <line num="43" count="10" type="stmt"/>
       </file>
@@ -705,15 +827,15 @@
         <line num="6" count="10" type="stmt"/>
         <line num="8" count="10" type="stmt"/>
         <line num="9" count="9" type="stmt"/>
-        <line num="11" count="5" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="21" count="5" type="stmt"/>
-        <line num="22" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="22" count="7" type="cond" truecount="1" falsecount="0"/>
         <line num="23" count="2" type="stmt"/>
         <line num="28" count="9" type="stmt"/>
         <line num="29" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="30" count="4" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
         <line num="36" count="10" type="stmt"/>
         <line num="40" count="10" type="stmt"/>
         <line num="41" count="10" type="stmt"/>
@@ -724,10 +846,10 @@
       <file name="prisma-utils.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/utils/prisma-utils.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="10" type="stmt"/>
-        <line num="2" count="11" type="stmt"/>
-        <line num="3" count="11" type="stmt"/>
-        <line num="4" count="17" type="stmt"/>
-        <line num="6" count="11" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
       </file>
       <file name="request.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/src/utils/request.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -753,19 +875,19 @@
         <line num="9" count="56" type="stmt"/>
         <line num="10" count="56" type="stmt"/>
         <line num="11" count="56" type="stmt"/>
-        <line num="12" count="55" type="stmt"/>
-        <line num="13" count="53" type="stmt"/>
-        <line num="14" count="53" type="stmt"/>
-        <line num="15" count="53" type="stmt"/>
-        <line num="16" count="53" type="stmt"/>
-        <line num="17" count="50" type="stmt"/>
-        <line num="18" count="50" type="stmt"/>
-        <line num="19" count="50" type="stmt"/>
+        <line num="12" count="56" type="stmt"/>
+        <line num="13" count="54" type="stmt"/>
+        <line num="14" count="54" type="stmt"/>
+        <line num="15" count="54" type="stmt"/>
+        <line num="16" count="54" type="stmt"/>
+        <line num="17" count="51" type="stmt"/>
+        <line num="18" count="51" type="stmt"/>
+        <line num="19" count="51" type="stmt"/>
         <line num="22" count="9" type="stmt"/>
         <line num="23" count="36" type="cond" truecount="2" falsecount="0"/>
         <line num="24" count="36" type="stmt"/>
         <line num="26" count="36" type="stmt"/>
-        <line num="28" count="34" type="stmt"/>
+        <line num="28" count="36" type="stmt"/>
       </file>
     </package>
     <package name="tests.factories">
@@ -795,7 +917,7 @@
         <line num="1" count="9" type="stmt"/>
         <line num="2" count="9" type="stmt"/>
         <line num="5" count="9" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
         <line num="14" count="9" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
@@ -814,10 +936,10 @@
         <line num="1" count="9" type="stmt"/>
         <line num="2" count="9" type="stmt"/>
         <line num="4" count="9" type="stmt"/>
-        <line num="5" count="7" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
         <line num="15" count="9" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="18" count="5" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
       </file>
       <file name="sessions-factory.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/tests/factories/sessions-factory.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -832,13 +954,13 @@
         <line num="1" count="9" type="stmt"/>
         <line num="3" count="9" type="stmt"/>
         <line num="5" count="9" type="stmt"/>
-        <line num="6" count="11" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
         <line num="16" count="9" type="stmt"/>
-        <line num="17" count="13" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
         <line num="26" count="9" type="stmt"/>
-        <line num="27" count="4" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
         <line num="37" count="9" type="stmt"/>
-        <line num="38" count="5" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
       </file>
       <file name="users-factory.ts" path="/home/alantimbo/Documents/Driven/Modulo5/projeto20-drivent-api-main/tests/factories/users-factory.ts">
         <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
@@ -846,9 +968,9 @@
         <line num="2" count="9" type="stmt"/>
         <line num="4" count="9" type="stmt"/>
         <line num="6" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="92" type="cond" truecount="2" falsecount="0"/>
-        <line num="8" count="92" type="stmt"/>
-        <line num="10" count="92" type="stmt"/>
+        <line num="7" count="91" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="91" type="stmt"/>
+        <line num="10" count="91" type="stmt"/>
       </file>
     </package>
   </project>

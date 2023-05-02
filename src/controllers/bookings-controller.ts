@@ -67,7 +67,7 @@ export async function updateBooking(req: AuthenticatedRequest, res: Response) {
                 message: error.message,
             })
         }
-        
+
         return res.sendStatus(httpStatus.FORBIDDEN)
     }
 }

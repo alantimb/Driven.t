@@ -1,15 +1,18 @@
 import { prisma } from "@/config"
 
-async function findRoom(roomId: number) {
-    return prisma.room.findFirst({
+async function findRoomAndBookings(roomId: number) {
+    return prisma.room.findUnique({
         where: {
             id: roomId
+        },
+        include: {
+            Booking: true
         }
     })
 }
 
 const roomsRepository = {
-    findRoom
+    findRoomAndBookings
 }
 
 export default roomsRepository
