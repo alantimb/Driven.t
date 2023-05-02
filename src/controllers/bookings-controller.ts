@@ -20,11 +20,13 @@ export async function getBooking(req: AuthenticatedRequest, res: Response) {
 export async function createBookingByRoomId(req: AuthenticatedRequest, res: Response) {
     const { userId } = req;
     const { roomId } = req.body as { roomId: number };
-
+    
     try {
-        const booking = await bookingsServices.createBooking(userId, roomId)
+        console.log(userId)
 
-        return res.status(httpStatus.OK).send(booking.id)
+        const bookingId = await bookingsServices.createBooking(userId, roomId);
+
+        return res.status(httpStatus.OK).send(bookingId);
     } catch (error) {
         if (error.name === "NotFoundError") return res.status(httpStatus.NOT_FOUND)
         if (error.name === "ForbiddenError") return res.status(httpStatus.FORBIDDEN)
