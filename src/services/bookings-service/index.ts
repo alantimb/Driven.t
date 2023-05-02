@@ -22,27 +22,38 @@ async function createBooking(userId: number, roomId: number) {
     const ticket = await ticketsRepository.findTicketByEnrollmentId(enrollment.id);
     const room = await roomsRepository.findRoom(roomId);
     const bookings = await bookingsRepository.findManyBookings(roomId);
-    console.log(ticket, room, bookings)
-    if (!room) {
-        console.log("oiii");
-        throw notFoundError();
-    }
+    
     if (!ticket) throw forbiddenError();
     if (ticket.TicketType.isRemote === true || ticket.TicketType.includesHotel === false || ticket.status !== 'PAID') {
-        console.log("oiii")
         throw forbiddenError();
     }
     
+    if (!room) throw notFoundError();
     if (bookings.length > room.capacity) throw forbiddenError()
-    
     const booking = await bookingsRepository.createBooking(userId, roomId);
-    console.log(booking)
+    
     return booking;
+}
+
+async function updateBooking(userId: number, bookingId: number, roomId: number) {
+    const room = await roomsRepository.findRoom(roomId);
+    const bookings = await bookingsRepository.findManyBookings(roomId);
+
+    if (!room) throw notFoundError();
+    if (bookings.length > room.capacity) throw forbiddenError()
+
+    const booking = await bookingsRepository.findUserBooking(userId, roomId)
+    if (!booking) throw forbiddenError();
+
+    const newBooking = await bookingsRepository.updateBooking(userId, bookingId, roomId);
+
+    return newBooking;
 }
 
 const bookingsServices = {
     listBooking,
-    createBooking
+    createBooking,
+    updateBooking
 };
 
 export default bookingsServices;
