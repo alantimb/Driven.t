@@ -14,3 +14,4 @@ export async function getBooking(req: AuthenticatedRequest, res: Response) {
         if (error.name === "NotFoundError") return res.status(httpStatus.NOT_FOUND)
     }
 }
+
