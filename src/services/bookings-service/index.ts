@@ -2,6 +2,7 @@ import { notFoundError } from "@/errors";
 import { forbiddenError } from "@/errors/forbidden-error";
 import bookingsRepository from "@/repositories/bookings-repository";
 import enrollmentRepository from "@/repositories/enrollment-repository";
+import hotelRepository from "@/repositories/hotel-repository";
 import roomsRepository from "@/repositories/rooms-repository";
 import ticketsRepository from "@/repositories/tickets-repository";
 
@@ -22,13 +23,19 @@ async function listBooking(userId: number) {
 async function createBooking(userId: number, roomId: number) {
     const enrollment = await enrollmentRepository.findFirstByUserId(userId);
     const ticket = await ticketsRepository.findTicketByEnrollmentId(enrollment.id);
-    
-    if (!ticket) throw forbiddenError();
-    if (ticket.TicketType.isRemote === true || ticket.TicketType.includesHotel === false) throw forbiddenError();
-    if (ticket.status !== 'PAID') throw forbiddenError()
+    const room = await roomsRepository.findRoom(roomId);
+    const bookings = await bookingsRepository.findManyBookings(roomId)
 
-    const booking = await bookingsRepository
-    
+    if (!room) throw notFoundError()
+    if (!ticket) throw forbiddenError();
+    if (ticket.TicketType.isRemote === true || ticket.TicketType.includesHotel === false || ticket.status !== 'PAID') {
+        throw forbiddenError();
+    }
+    if (bookings.length > room.capacity) throw forbiddenError()
+
+    const booking = await bookingsRepository.createBooking(userId, roomId)
+
+    return booking    
 }
 
 const bookingsServices = {
