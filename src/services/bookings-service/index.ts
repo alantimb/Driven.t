@@ -22,17 +22,22 @@ async function createBooking(userId: number, roomId: number) {
     const ticket = await ticketsRepository.findTicketByEnrollmentId(enrollment.id);
     const room = await roomsRepository.findRoom(roomId);
     const bookings = await bookingsRepository.findManyBookings(roomId);
-
-    if (!room) throw notFoundError();
+    console.log(ticket, room, bookings)
+    if (!room) {
+        console.log("oiii");
+        throw notFoundError();
+    }
     if (!ticket) throw forbiddenError();
     if (ticket.TicketType.isRemote === true || ticket.TicketType.includesHotel === false || ticket.status !== 'PAID') {
+        console.log("oiii")
         throw forbiddenError();
     }
+    
     if (bookings.length > room.capacity) throw forbiddenError()
-
+    
     const booking = await bookingsRepository.createBooking(userId, roomId);
-
-    return booking.id;
+    console.log(booking)
+    return booking;
 }
 
 const bookingsServices = {
