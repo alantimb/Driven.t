@@ -21,7 +21,7 @@ async function createBooking(userId: number, roomId: number) {
     const enrollment = await enrollmentRepository.findFirstByUserId(userId);
     const ticket = await ticketsRepository.findTicketByEnrollmentId(enrollment.id);
     const room = await roomsRepository.findRoomAndBookings(roomId);
-    const bookings = await bookingsRepository.findManyBookings(roomId);
+    const roomBookings = await bookingsRepository.findManyBookings(roomId);
     
     if (!ticket) throw forbiddenError();
     if (ticket.TicketType.isRemote === true || ticket.TicketType.includesHotel === false || ticket.status !== 'PAID') {
@@ -36,16 +36,25 @@ async function createBooking(userId: number, roomId: number) {
 }
 
 async function updateBooking(userId: number, bookingId: number, roomId: number) {
+    const enrollment = await enrollmentRepository.findFirstByUserId(userId);
+    const ticket = await ticketsRepository.findTicketByEnrollmentId(enrollment.id);
+
+    if (!ticket) throw forbiddenError();
+    if (ticket.TicketType.isRemote === true || ticket.TicketType.includesHotel === false || ticket.status !== 'PAID') {
+        throw forbiddenError();
+    }
+
     const room = await roomsRepository.findRoomAndBookings(roomId); 
+    const roomBookings = await bookingsRepository.findManyBookings(roomId)
     if (!room) throw notFoundError();
-    if (room.capacity <= room.Booking.length){ 
+    if (room.capacity <= roomBookings.length){ 
         throw forbiddenError()
     }
 
-    const booking = await bookingsRepository.findUserBooking(userId, roomId)
+    const booking = await bookingsRepository.findUserBooking(userId)
     if (!booking) throw forbiddenError();
 
-    const newBooking = await bookingsRepository.updateBooking(userId, bookingId, roomId);
+    const newBooking = await bookingsRepository.updateBooking(bookingId, roomId);
 
     return newBooking;
 }

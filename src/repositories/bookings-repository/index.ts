@@ -20,11 +20,10 @@ async function findManyBookings(roomId: number) {
     })
 }
 
-async function findUserBooking(userId: number, roomId: number) {
+async function findUserBooking(userId: number) {
     return await prisma.booking.findFirst({
         where: {
-            userId,
-            roomId
+            userId
         }
     })
 }
@@ -38,14 +37,13 @@ async function createBooking(userId: number, roomId: number) {
     })
 }
 
-async function updateBooking(userId: number, bookingId: number, roomId: number): Promise<Booking> {
+async function updateBooking(bookingId: number, roomId: number): Promise<Booking> {
     return prisma.booking.update({
         where: {
             id: bookingId
         },
         data: {
-            userId,
-            roomId
+            roomId: roomId
         }
     })
 }

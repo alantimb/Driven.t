@@ -111,7 +111,6 @@ describe('GET /hotels', () => {
       const response = await server.get('/hotels').set('Authorization', `Bearer ${token}`);
 
       expect(response.status).toEqual(httpStatus.NOT_FOUND);
-      /* expect(response.body).toEqual([]); */
     });
   });
 });
