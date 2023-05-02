@@ -20,25 +20,23 @@ async function listBooking(userId: number) {
 async function createBooking(userId: number, roomId: number) {
     const enrollment = await enrollmentRepository.findFirstByUserId(userId);
     const ticket = await ticketsRepository.findTicketByEnrollmentId(enrollment.id);
-    const room = await roomsRepository.findRoomAndBookings(roomId);
-    const roomBookings = await bookingsRepository.findManyBookings(roomId);
-    
     if (!ticket) throw forbiddenError();
     if (ticket.TicketType.isRemote === true || ticket.TicketType.includesHotel === false || ticket.status !== 'PAID') {
         throw forbiddenError();
     }
     
+    const room = await roomsRepository.findRoomAndBookings(roomId);
+    const roomBookings = await bookingsRepository.findManyBookings(roomId);
     if (!room) throw notFoundError();
-    if (room.capacity <= room.Booking.length) throw forbiddenError()
-    const booking = await bookingsRepository.createBooking(userId, roomId);
+    if (room.capacity <= roomBookings.length) throw forbiddenError()
+    const newBooking = await bookingsRepository.createBooking(userId, roomId);
     
-    return booking;
+    return newBooking;
 }
 
 async function updateBooking(userId: number, bookingId: number, roomId: number) {
     const enrollment = await enrollmentRepository.findFirstByUserId(userId);
     const ticket = await ticketsRepository.findTicketByEnrollmentId(enrollment.id);
-
     if (!ticket) throw forbiddenError();
     if (ticket.TicketType.isRemote === true || ticket.TicketType.includesHotel === false || ticket.status !== 'PAID') {
         throw forbiddenError();
