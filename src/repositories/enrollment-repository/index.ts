@@ -10,10 +10,10 @@ async function findWithAddressByUserId(userId: number) {
   });
 }
 
-async function findFirstByUserId(params: number) {
+async function findFirstByUserId(userId: number) {
   return prisma.enrollment.findFirst({
     where: {
-      userId: params
+      userId: userId
     }
   })
 }
@@ -45,6 +45,7 @@ const enrollmentRepository = {
   findWithAddressByUserId,
   upsert,
   findById,
+  findFirstByUserId
 };
 
 export default enrollmentRepository;
